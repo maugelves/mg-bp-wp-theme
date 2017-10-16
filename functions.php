@@ -8,6 +8,9 @@
 include __DIR__ . "/includes/installation.php";
 
 
+
+
+
 /*
 *   =================================================================================================
 *   BASIC CONFIGURATION
@@ -15,6 +18,21 @@ include __DIR__ . "/includes/installation.php";
 *   =================================================================================================
 */
 include __DIR__ . "/includes/config.php";
+
+
+
+
+
+/*
+*   =================================================================================================
+*   LIBRARIES
+*   Load all the needed libraries
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/libs/*.php") as $filename)
+	include $filename;
+
+
 
 
 
@@ -29,6 +47,9 @@ foreach (glob(__DIR__ . "/includes/enqueues/*.php") as $filename)
     include $filename;
 
 
+
+
+
 /*
 *   ================================================================================================= 
 *   CUSTOM POST TYPES
@@ -38,4 +59,3 @@ foreach (glob(__DIR__ . "/includes/enqueues/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/includes/cpts/*.php") as $filename)
     include $filename;
-?>
