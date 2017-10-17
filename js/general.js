@@ -1,7 +1,8 @@
-jQuery(document).ready(function($){
+(function() {
 
-	general = {
-		addEventListeners: function() {
+    general = {
+
+        addEventListeners: function() {
 
             // Add Click Listener to the Hamburguer
             u('.hamburger').on('click', function(){
@@ -15,9 +16,10 @@ jQuery(document).ready(function($){
             general.addEventListeners();
 
         }
-	}
+        
+    };
 
-	// Initialize the general object
-	general.init();
+    // Initialize the general object
+    general.init();
 
-});
+})();
