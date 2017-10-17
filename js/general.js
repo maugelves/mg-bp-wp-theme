@@ -22,7 +22,31 @@
                     general.expandSection(section);
                 }
 
-            })
+            });
+
+
+
+
+            // On Window resize close the nagigation menu
+            window.addEventListener('resize', function(){
+
+                // Execute every 10 pixels
+                if( window.outerWidth%10 === 0 ) {
+
+                    var section = document.querySelector('#site-navigation--mobile.main-navigation');
+                    var isOpened = section.getAttribute('data-opened') === 'true';
+
+                    if( isOpened ) {
+
+                        general.collapseSection(section);
+                        section.setAttribute('data-opened', 'false');
+                        u('.hamburger').removeClass('is-active');
+
+                    }
+
+                }
+
+            });
 
         },
         init: function(){
