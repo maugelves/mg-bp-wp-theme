@@ -12,6 +12,13 @@ function site_scripts() {
 	// Umbrella.JS
 	wp_enqueue_script('umbrellajs', get_bloginfo( 'template_url' ) . '/js/libs/umbrella.min.js', array(), false, true );
 
+
+	/*
+	Object Fit Images Polyfill
+	https://github.com/bfred-it/object-fit-images
+	*/
+	wp_enqueue_script('ofi', get_bloginfo( 'template_url' ) . '/js/libs/ofi.min.js', array(), false, true );
+
 	/* Registrar y encolar aquí los ficheros Javascripts. Ejemplo:
 	wp_register_script('commonjs', get_bloginfo('template_url') . '/js/common' . $jsExtension, array('jquery'),'',true);
 	wp_enqueue_script('contactojs');
