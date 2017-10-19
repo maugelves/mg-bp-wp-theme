@@ -59,3 +59,17 @@ foreach (glob(__DIR__ . "/includes/enqueues/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/includes/cpts/*.php") as $filename)
     include $filename;
+
+
+
+
+
+/*
+*   =================================================================================================
+*   HOOKS
+*	Include all the Custom Hooks you need in the 'includes/hooks/' folder and they will be loaded
+*   automatically.
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/hooks/*.php") as $filename)
+	include $filename;

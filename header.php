@@ -3,7 +3,15 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="author" href="<?php echo get_template_directory_uri(); ?>/humans.txt">
+
+	<?php if((defined('WP_DEVELOPMENTMODE') && WP_DEVELOPMENTMODE )): ?>
+    <!-- LiveReload -->
+    <script src="//localhost:35729/livereload.js"></script>
+    <?php endif; ?>
 
 	<?php wp_head(); ?>
 </head>
