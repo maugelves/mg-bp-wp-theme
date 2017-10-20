@@ -26,7 +26,7 @@ body {
 
 img::selection {
 	background: transparent;
-}a
+}
 
 
  ::-moz-selection {
@@ -92,18 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-h1, h2 {
-	font-weight: bold;
-	line-height: 1.5em;
-}
-
-
-h3, h4, h5, h6 {
-	font-weight: 600;
-	line-height: 1.4em;
-}
-
-
 /*------------------------------------*\
     # Text
 \*------------------------------------*/
@@ -135,14 +123,6 @@ small {
 abbr {
 	cursor: help;
 	border-bottom: 1px dotted #eeeeee;
-}
-
-
-blockquote {
-	margin: 1.428em;
-	padding: 10px 20px;
-	font-style: italic;
-	border-left: 2px solid $color__text-screen;
 }
 
 
@@ -227,25 +207,4 @@ thead {
 	background: #fff;
 	font-weight: 600;
 	color: $color__text-screen;
-}
-
-
-caption {
-	font-weight: 600;
-	padding-bottom: 5px;
-}
-
-
-
-/*------------------------------------*\
-    # Forms
-\*------------------------------------*/
-
-form {
-	margin: 1.428em 0;
-}
-
-label {
-	font-weight: 600;
-	margin-bottom: 0.357em;
 }
