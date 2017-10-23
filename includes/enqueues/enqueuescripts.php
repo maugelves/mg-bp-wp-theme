@@ -8,9 +8,9 @@ function site_scripts() {
 	if( defined('WP_DEBUG') && true === WP_DEBUG )
 		wp_enqueue_script('livereload', get_bloginfo( 'template_url' ) . '/js/libs/livereload.js', array(), '', false );
 
-
-	// Umbrella.JS
-	wp_enqueue_script('umbrellajs', get_bloginfo( 'template_url' ) . '/js/libs/umbrella.min.js', array(), false, true );
+	// Register Libraries
+	wp_register_script('umbrellajs', get_bloginfo( 'template_url' ) . '/js/libs/umbrella.min.js', array(), false, true );
+	wp_register_script('validatejs', get_bloginfo( 'template_url' ) . '/js/libs/validate.min.js', array(), false, true );
 
 
 	/*
