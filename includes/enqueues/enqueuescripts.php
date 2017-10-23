@@ -14,6 +14,13 @@ function site_scripts() {
 
 
 	/*
+	 * HeadRoom Js
+	 * http://wicky.nillia.ms/headroom.js/
+	 */
+	wp_enqueue_script('headroom', get_bloginfo( 'template_url' ) . '/js/libs/headroom.min.js', array(), false, true );
+
+
+	/*
 	Object Fit Images Polyfill
 	https://github.com/bfred-it/object-fit-images
 	*/
