@@ -10,7 +10,7 @@ function site_scripts() {
 
 	// Register Libraries
 	wp_register_script('umbrellajs', get_bloginfo( 'template_url' ) . '/js/libs/umbrella.min.js', array(), false, true );
-	wp_register_script('validatejs', get_bloginfo( 'template_url' ) . '/js/libs/validate.min.js', array(), false, true );
+	wp_register_script('validatejs', get_bloginfo( 'template_url' ) . '/js/libs/validate.min.js', array(), false, true ); // https://validatejs.org
 
 
 	/*
