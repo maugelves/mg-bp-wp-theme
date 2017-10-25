@@ -51,6 +51,7 @@
         },
         init: function(){
 
+            // Add Event Listeners
             general.addEventListeners();
 
         },
