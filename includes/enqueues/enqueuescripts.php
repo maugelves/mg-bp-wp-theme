@@ -24,7 +24,7 @@ function site_scripts() {
 	 * Smooth Scroll Js
 	 * https://github.com/cferdinandi/smooth-scroll
 	 */
-	wp_enqueue_script('headroom', get_bloginfo( 'template_url' ) . '/js/libs/smooth-scroll.min.js', array(), false, true );
+	wp_enqueue_script('smoothscroll', get_bloginfo( 'template_url' ) . '/js/libs/smooth-scroll.min.js', array(), false, true );
 
 
 	/*
