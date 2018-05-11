@@ -1,93 +1,47 @@
 /*!
-Theme Name: <theme name>
-Author: <author name>
-Author URI: <author URI>
-Description: <Theme Description>
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: <text domain>
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Theme Name: Template
+Author: Mauricio Gelves <mg@maugelves.com>
+Author URI: https://maugelves.com
+Description: Custom wordpres theme for Template.
+Version: 1.0
+Text Domain: <template>
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Compass resets.......A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * FONTS
+ * Google Fronts........Import url google fonts
+ * Local Fronts.........Import local resource fonts
+ *
+ * BASE
+ * Headings, linkst.....H1..H6 styles, base styles.
+ *
+ * COMMON
+ * Common & helper......Helper classes and individual components.
+ *
+ * COMPONENTS
+ * Page head, nav.......The main page header.
+ *
+ * IE
+ * Class IE.............Fixed for Internet explorer
+ */
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "settings";
+@import "tools";
+@import "compass/reset";
+@import "fonts";
+@import "base";
+@import "common";
+@import "ie";
+@import "containers";
