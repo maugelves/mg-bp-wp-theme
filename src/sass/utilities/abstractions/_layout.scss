@@ -1,0 +1,23 @@
+/*
+ * Repeatable styles commonly used throughtout the sites abstracted into mixins.
+ */
+
+/*
+ * Outer Margins.
+ * Sets the spacing between containers and the browser window.
+ */
+@mixin outer-margins {
+	padding-left: $item-gutter;
+	padding-right: $item-gutter;
+
+	@include mq($from: tablet) {
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+
+	// Once the screen is wider than our grid container we don't need padding anymore on the left and right.
+	@include mq($from: wide) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

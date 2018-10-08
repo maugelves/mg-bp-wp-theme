@@ -39,30 +39,11 @@ $white: #FFFFFF;
 $black: #000000;
 
 // Shades of grey ordered darkest to lightest.
-$cod-gray: #303030; // Used for default font color - seems to be the same in all site designs atm.
-$baltic-sea: #3D3D3D;
-$dark-grey: #575757;
-$dove-grey: #717171;
-$silver-sand: #C3C3C3;
-$gray87: #DEDEDE;
-$zircon: #F6F6F6;
-$concrete: #F2F2F2;
 
 // Theme Colours.
-$white-haze: #F7F7F7; // The variable name doesn't respect the SIP code (black-haze). We changed it to avoid confusion since it's a light color.
-$cornell-red: #BA141C;
-$domino: #947E5A; // Used for font colors (heading subtitles).
-$sorrell-brown: #94805C;
 
 // Gradients.
-$gradient-color-dark: rgba(60,72,87, 0.9);
-$gradient-color-light: rgba(111,138,157, 0.9);
-$gradient-color-transparent-dark: rgba(0,0,0,0.50);
 
-$gradient-bottom: linear-gradient(to bottom, $gradient-color-dark, $gradient-color-light );
-$gradient-right: linear-gradient(to right, $gradient-color-dark, $gradient-color-light );
-$gradient-top: linear-gradient(to top, $gradient-color-dark, $gradient-color-light);
-$gradient-soft-transparent: linear-gradient(-180deg, rgba(0,0,0,0), $gradient-color-transparent-dark); // Used in Card Components to make the text readable.
 
 /*
  * 3. Gutters.
@@ -74,12 +55,6 @@ $gradient-soft-transparent: linear-gradient(-180deg, rgba(0,0,0,0), $gradient-co
 $gutter: em(30);
 $item-gutter: $gutter / 2; // Used on all grid layouts so that total spacing between items is correct.
 
-/*
- * This small gutter is used only for the Hero Card.
- * In case we need an extra gutter size I suggest to refactor the $gutter variable into a SASS mixin function.
- */
-$gutter-hero: em(6);
-$item-gutter-hero: $gutter-hero / 2;
 
 // Websites Max Widths.
 $max-width-mobile: 100%;
@@ -90,74 +65,18 @@ $max-width-narrow-container: 850px; // Applied to .post-content on editorial pag
 $min-width-table-mobile: 600px; // Tables in mobile have scroll-x.
 
 /*
- * Some maths to allow certain content types to break out of $max-width-narrow-container.
- * To find the negative margin, first deduct the narrow container width by the desired size (1200 - 850 = 350, 1920 - 850 = 1070).
- * Then divide by 2 to create the margin value.
- */
-$alignwide-container-margin: em(-175);
-$alignfull-container-margin: em(-535);
-
-/*
- * Applied to the bottom of each section for consistent spacing throughout.
- */
-$section-spacing-mobile: em(60);
-$section-spacing-desktop: em(80);
-
-/*
  * 4. Implementation of Colours.
  * ------------------
  * Used specifically to make sure some base theme colors can be changed easily on later sites.
  */
 
 // Global colors.
-$body-background-color: $concrete;
+$body-background-color: $white;
 $container-background-color: $white;
 
-$border-color-default: $zircon; // currently used on blockquotes
-$border-color-inverted: $white;
-
 // Typography colors.
-$font-color-default: $cod-gray;
+$font-color-default: $black;
 $font-color-inverted: $white;
-$text-shadow-galleries: 0 2px 4px rgba(0,0,0,0.5);
-
-$font-color-editorial: $dark-grey;
-
-$section-subtitle-default: $domino; // Heading Subtitles colours.
-
-$footer-color-default: rgba( $white-haze, 0.9 );
-
-// Header colors.
-$global-header-background-color: $container-background-color;
-$global-header-border-color: $cornell-red;
-$main-nav-link-color: $cod-gray;
-$main-nav-link-hover-color: $sorrell-brown;
-$site-logo-color: $cod-gray;
-$search-form-icon-color: $cod-gray;
-$search-form-icon-hover-color: $cornell-red;
-
-// Button colors.
-$button-text-color-default: $white-haze;
-$button-background-color-default: $cod-gray;
-$button-border-color-default: $cod-gray;
-
-$button-text-color-active: $white-haze;
-$button-background-color-active: $cornell-red;
-$button-border-color-active: $cornell-red;
-
-// Card colors.
-$card-detail-background-default: $cornell-red;
-$card-detail-background-alt: $white-haze;
-$card-detail-background-opacity: rgba( $cornell-red, 0.9 );
-$card-related-border-default: $white-haze;
-$card-related-article-background: $silver-sand;
-
-// Footer colours.
-$footer-gradient-color-dark: $cod-gray;
-$footer-gradient-color-light: $dark-grey;
-
-// Slider
-$slider-arrow-color-default: $gray87;
 
 /*
  * 5. Miscellaneous Global Settings.
@@ -166,20 +85,3 @@ $slider-arrow-color-default: $gray87;
 
 $grid-columns-desktop: 12;
 $grid-columns-mobile: 6;
-
-/*
- * Animations of box shadow are done using opacity rather than box-shadow to limit re-paints.
- * This means that in order to show a shadow with 0.2 (20%) alpha channel and animate it to 0.4 (40%), we need to set an opacity
- * on the shadow using the opacity CSS property instead. If we set this initially to 0.5, we can then double the alpha from 0.2 to 0.4
- * This will then display the shadow at 20% initially as needed.
- * Then, when we animate the opacity to 1. Our alpha channel of 4 will still be right.
- * New variable of $box-shadow-animation created for this because $box-shadow is used in multiple places.
- */
-$box-shadow: 0 9px 14px 0 rgba( $black, 0.2 );
-$box-shadow-hover: 0 9px 14px 0 rgba( $black, 0.4 );
-$box-shadow-animation: 0 9px 14px 0 rgba( $black, 0.4 );
-$box-shadow-light: 0 5px 15px 0 rgba( $cod-gray, 0.3 );
-$box-shadow-accessibility: 0 0 10px 0 rgba( $cornell-red, 0.8 );
-
-$card-border-radius: em(10);
-$button-border-radius: em(4);

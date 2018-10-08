@@ -15,7 +15,6 @@
 	}
 
 	@include mq($from: desktop) {
-		box-shadow: $box-shadow-light;
 		max-width: $max-width-wrapper;
 		padding-top: 32px; // Fixed height of the sticky header.
 	}
@@ -27,15 +26,6 @@
 	margin: 0 auto;
 	max-width: $max-width-container;
 	@include outer-margins;
-}
-
-// Sections of a page. Usually sections of cards.
-.section {
-	padding-bottom: $section-spacing-mobile;
-
-	@include mq($from: tablet) {
-		padding-bottom: $section-spacing-desktop;
-	}
 }
 
 // Houses any section that needs a grid.

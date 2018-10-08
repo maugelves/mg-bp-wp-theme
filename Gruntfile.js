@@ -2,16 +2,16 @@ module.exports = function(grunt) {
 
     // NPM plugins configuration
     grunt.initConfig({
+        path: 'content/themes/rawspace',
         compass: {
             dev: {
-                files: {
-                    'style.css' : 'sass/style.scss'
-                },
                 options: {
-                    cssDir:         './',
-                    noLineComments: true,
+                    basePath:       '<%= path %>/src/',
+                    cssDir:         '../',
+                    noLineComments: false,
                     outputStyle:    'expanded',
                     sassDir:        'sass',
+                    specify:        '<%= path %>/src/sass/style.scss',
                     watch:          false
                 }
             },
@@ -36,15 +36,17 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: '*.css'
+                src: '<%= path %>/*.css'
             }
         },
         watch:{
+            options: {
+                livereload: true
+            },
             sass:{
-                files: ['sass/**/*.scss'],
+                files: ['<%= path %>/src/sass/**/*.scss'],
                 tasks: ['compass:dev','postcss'],
                 options: {
-                    livereload: true,
                     spawn:      false
                 }
             }
@@ -52,8 +54,8 @@ module.exports = function(grunt) {
     });
 
     // Load the NPM plugins
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-postcss');
 
     // Register Tasks
