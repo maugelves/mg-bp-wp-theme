@@ -1,0 +1,16 @@
+/*
+ * General Base Styles.
+ *
+ * These would be applied globally across the site.
+ * Very little should be needed here.
+ */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: $body-background-color;
+    color: $font-color-default;
+    font-family: $font-stack-sans-serif;
+}

@@ -1,0 +1,73 @@
+/*
+ * @type-setting() mixin.
+ *
+ * Mixin to control vertical rhythm by combining type-scale and line-height.
+ *
+ * Expected Usage:
+ * @include type-setting(4);
+ *
+ * Technique outline here: https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
+ * Indices used have been changed from '-1' - '8' to numbers that accurately reflect desired font size.
+ */
+
+/*
+ * Setting a base line height helps to maintain vertical rhythm by multiplying all line-heights by that.
+ * Based on this technique => https://www.thejtsite.com/blog/single/how-to-calculate-relative-css-line-height
+ * Note: rem not used here as no support in IE10 when used in line-heights.
+ * Note:  $base-line-height needs declaring here and not _variables because its imported before.
+ */
+$base-line-height: 1.25;
+
+$type-scale: (
+	09: 0.5625rem, // - 9px.
+	10: 0.625rem, // - 10px.
+	11: 0.6875rem, // - 11px.
+	12: 0.75rem, // - 12px.
+	14: 0.875rem, // - 14px.
+	16: 1rem, // - 16px - BASE.
+	18: 1.125em, // - 18px.
+	20: 1.25rem, // - 20px.
+	24: 1.5rem, // 24px.
+	28: 1.75rem, // - 28px - H2.
+	34: 2.215rem, // - 34px.
+	45: 2.813rem, // - 45px - 34pt.
+	48: 3rem, // 48px.
+	55: 3.4rem, // 55px.
+	64: 4rem // 64px.
+);
+
+/*
+ * Font size conversions are based on the 16px conversion rate as thats the largest size allowed in responsive body type setting.
+ * Easy REM calculator: https://offroadcode.com/rem-calculator/
+ */
+
+// Helper function to map font sizes to indexes.
+@function type-scale($level) {
+	@return map-get($type-scale, $level);
+}
+
+// Indexes here must much indexes above.
+$line-heights: (
+	09: $base-line-height,
+	10: $base-line-height,
+	11: $base-line-height,
+	12: $base-line-height * 1.13333, // Create 16.9999px (17px taken from Sketch) as unitless value for line-heights.
+	14: $base-line-height * 1.086, // Create 19.005px (19px taken from Sketch) as unitless value for line-heights.
+	16: $base-line-height * 1.3,
+	18: $base-line-height * 1.25,
+	20: $base-line-height * 1.25,
+	28: $base-line-height * 1.2,
+	34: $base-line-height * 1.5,
+	45: $base-line-height * 1.5,
+);
+
+// Helper function to map line-height to indexes.
+@function line-heights($level) {
+	@return map-get($line-heights, $level);
+}
+
+// Mixin to map font-sizes to line-heights with the same index.
+@mixin type-setting($level: 0) {
+	font-size: type-scale($level);
+	line-height: line-heights($level);
+}

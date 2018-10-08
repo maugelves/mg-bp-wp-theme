@@ -1,0 +1,37 @@
+/**
+ * Main Stylesheet for the front-end of the site.
+ *
+ * Styles Inheritance.
+ *
+ * Base Theme.
+ * The _index.scss in the root of the base theme's /scss folder should import the _index.scss from each sub folder i.e.
+ * @imports 'atoms/index';
+ * Each sub _index.scss imports everything in its subfolder i.e.
+ * @imports 'inputs';
+ *
+ * Child Themes.
+ * To avoid inhertance issues and files being directly over written,the _index.scss in the root of the child theme
+ * should import all files individually i.e.
+ * @import 'atoms/inputs';
+ * @import 'atoms/buttons';
+ * There should not be an _index.scss in sub folders in the child theme as these will overwrite ones in the base theme.
+ *
+ * Exceptions.
+ * Exceptions to this are any files that need to overwrite base theme files.
+ * For example, in order to use sass functions and mixins in child themes, these files/folders would need to be copied to
+ * the child theme with the same folder structure. Variables should also overwrite base theme files.
+ */
+
+@import 'utilities/index';
+@import 'variables';
+
+@import 'base';
+
+// Atomic structure
+@import 'atoms/index';
+@import 'molecules/index';
+@import 'organisms/index';
+@import 'templates/index';
+@import 'pages/index';
+
+@import 'shame';

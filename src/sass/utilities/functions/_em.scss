@@ -1,0 +1,21 @@
+/*
+ * px to em conversion
+ *
+ * Expected Usage:
+ * @include em(32);		- 32 is desired px size when using browser default base font size
+ * @include em(32, 12); - 32 is desired px size if base font size is 12
+ *
+ * @param  {Number/String} $target            - Pixel target
+ * @param  {Number/String} $context: $base-em - Current context
+ * @return {String}                           - Em value
+ */
+
+@function em( $target, $context: $base-em )  {
+	$target: strip-unit( $target ) / strip-unit( $context ) * 1em;
+
+	@if ( $target == 0em ) {
+		$target: 0; // Turn 0em into 0
+	}
+
+	@return $target;
+}

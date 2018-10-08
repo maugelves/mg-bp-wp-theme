@@ -1,0 +1,10 @@
+/*
+ * Strip unit
+ *
+ * @param  {String} $num - Strips any non numeric values
+ * @return {Number}      - The number without non numeric values
+ */
+
+@function strip-unit( $num ) {
+	@return $num / ( $num * 0 + 1 );
+}
