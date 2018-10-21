@@ -37,6 +37,9 @@ function <theme name>_after_setup_theme(){
      */
     add_theme_support( 'custom-logo' );
 
+    // Gutenberg Full-Width
+    add_theme_support( 'align-wide' );
+
 
     // This theme uses wp_nav_menu() in many locations.
     register_nav_menus( array(
