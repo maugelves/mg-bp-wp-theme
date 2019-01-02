@@ -2,28 +2,25 @@ module.exports = function(grunt) {
 
     // NPM plugins configuration
     grunt.initConfig({
-        path: 'content/themes/rawspace',
         compass: {
             dev: {
                 options: {
-                    basePath:       '<%= path %>/src/',
-                    cssDir:         '../',
+                    cssDir:         './',
                     noLineComments: false,
                     outputStyle:    'expanded',
-                    sassDir:        'sass',
-                    specify:        '<%= path %>/src/sass/style.scss',
+                    sassDir:        'src/sass/',
+                    specify:        'src/sass/style.scss',
                     watch:          false
                 }
             },
             dist: {
-                files: {
-                    'style.css' : 'sass/style.scss'
-                },
                 options: {
                     cssDir:         './',
+                    force:          true,
                     noLineComments: false,
-                    outputStyle:    'compact',
-                    sassDir:        'sass',
+                    outputStyle:    'compressed',
+                    sassDir:        'src/sass/',
+                    specify:        'src/sass/style.scss',
                     watch:          false
                 }
             }
@@ -36,15 +33,15 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: '<%= path %>/*.css'
+                src: '*.css'
             }
         },
         watch:{
             options: {
-                livereload: true
+                livereload: true,
             },
             sass:{
-                files: ['<%= path %>/src/sass/**/*.scss'],
+                files: ['src/sass/**/*.scss'],
                 tasks: ['compass:dev','postcss'],
                 options: {
                     spawn:      false
@@ -59,5 +56,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
 
     // Register Tasks
-    grunt.registerTask('build', ['compass:dist']);
+    grunt.registerTask('build', ['compass:dist','postcss']);
 };
