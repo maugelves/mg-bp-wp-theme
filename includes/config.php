@@ -12,7 +12,7 @@ add_filter('show_admin_bar', '__return_false');
  * as indicating support for post thumbnails.
  */
 
-function <theme name>_after_setup_theme(){
+function mgwp_after_setup_theme(){
 
     /*
      * Make theme available for translation.
@@ -20,7 +20,7 @@ function <theme name>_after_setup_theme(){
      * If you're building a theme based on mgtc-theme, use a find and replace
      * to change 'mgtc-theme' to the name of your theme in all the template files.
      */
-    load_theme_textdomain( '<domain name>', get_template_directory() . '/languages' );
+    load_theme_textdomain( $DOMAIN_NAME, get_template_directory() . '/languages' );
 
 
     /*
@@ -43,7 +43,7 @@ function <theme name>_after_setup_theme(){
 
     // This theme uses wp_nav_menu() in many locations.
     register_nav_menus( array(
-        'main-menu'             => esc_html__( 'Primary', '<domain name>' ),
+        'main-menu'             => esc_html__( 'Primary', $DOMAIN_NAME ),
     ) );
 
     /*
@@ -64,4 +64,4 @@ function <theme name>_after_setup_theme(){
         add_filter('acf/settings/show_admin', '__return_false');
 
 }
-add_action( 'after_setup_theme', '<theme name>_after_setup_theme' );
+add_action( 'after_setup_theme', 'mgwp_after_setup_theme' );
