@@ -20,7 +20,7 @@ function mgwp_after_setup_theme(){
      * If you're building a theme based on mgtc-theme, use a find and replace
      * to change 'mgtc-theme' to the name of your theme in all the template files.
      */
-    load_theme_textdomain( $DOMAIN_NAME, get_template_directory() . '/languages' );
+    load_theme_textdomain( DOMAIN_NAME, get_template_directory() . '/languages' );
 
 
     /*
@@ -43,7 +43,7 @@ function mgwp_after_setup_theme(){
 
     // This theme uses wp_nav_menu() in many locations.
     register_nav_menus( array(
-        'main-menu'             => esc_html__( 'Primary', $DOMAIN_NAME ),
+        'main-menu'             => esc_html__( 'Primary', DOMAIN_NAME ),
     ) );
 
     /*
