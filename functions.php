@@ -82,3 +82,17 @@ foreach (glob(__DIR__ . "/includes/cpts/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/includes/hooks/*.php") as $filename)
 	include $filename;
+
+
+
+
+
+/*
+*   =================================================================================================
+*   GUTENBERG BLOCKS
+*	Include all the Gutenberg Blocks you need in the 'includes/gblocks/' folder and they will be 
+*	loaded automatically.
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/gblocks/*.php") as $filename)
+	include $filename;
