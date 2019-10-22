@@ -30,9 +30,9 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+		</div><!-- .site-header__branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav class="site-header__navigation">
 
 			<?php
 				wp_nav_menu([
@@ -40,8 +40,8 @@
 				]);
 			?>
 			
-		</nav><!-- #site-navigation -->
+		</nav><!-- .site-header__navigation -->
 		
-	</header><!-- #masthead -->
+	</header><!-- .site-header -->
 
-	<div id="content" class="site-content">
+	<div class="site-content">
