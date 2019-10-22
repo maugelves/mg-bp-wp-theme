@@ -58,7 +58,6 @@ $item-gutter: $gutter / 2; // Used on all grid layouts so that total spacing bet
 
 // Websites Max Widths.
 $max-width-mobile: 100%;
-$max-width-mobile-footer: 204px;
 $max-width-wrapper: 1920px; // Applied to .site-wrapper. Also need to match breakpoints in _mq.scss.
 $max-width-container: 1200px; // Applied to .container & .grid-container. Also need to match breakpoints in _mq.scss.
 $max-width-narrow-container: 850px; // Applied to .post-content on editorial pages to get different widths of content.

@@ -6,18 +6,7 @@
 .site-wrapper {
 	background-color: $container-background-color;
 	margin: 0 auto;
-	padding: 129px 0 10px; // Fixed height of the sticky header and space at the bottom.
-	width: $max-width-mobile;
 	overflow: hidden;
-
-	@include mq($from: tablet) {
-		padding-top: 89px; // Fixed height of the sticky header.
-	}
-
-	@include mq($from: desktop) {
-		max-width: $max-width-wrapper;
-		padding-top: 32px; // Fixed height of the sticky header.
-	}
 }
 
 // General utility class for sections within the page.
