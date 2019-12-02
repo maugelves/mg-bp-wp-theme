@@ -5,6 +5,7 @@
     "autoprefixer": "*",
     "grunt": "*",
     "grunt-contrib-compass": "*",
+    "grunt-compass-multiple": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-watch": "*",
     "grunt-postcss": "*"

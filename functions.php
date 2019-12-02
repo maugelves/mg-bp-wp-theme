@@ -43,6 +43,17 @@ foreach (glob(__DIR__ . "/includes/libs/*.php") as $filename)
 
 
 
+/*
+*   =================================================================================================
+*   HELPERS
+*   Load all the needed helpers
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/helpers/*.php") as $filename)
+	include $filename;
+
+
+
 
 
 /*

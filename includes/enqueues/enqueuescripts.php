@@ -5,7 +5,7 @@
 function site_scripts() {
 
 	// Load LiveReload library for development purposes
-	if( defined('WP_DEBUG') && true === WP_DEBUG )
+	if( defined('WP_LOCAL_DEV') && true === WP_LOCAL_DEV )
 		wp_enqueue_script('livereload', get_bloginfo( 'template_url' ) . '/js/libs/livereload.js', array(), '', false );
 
 	// Register Libraries

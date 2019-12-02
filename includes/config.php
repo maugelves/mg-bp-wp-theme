@@ -42,9 +42,10 @@ function mgwp_after_setup_theme(){
 
 
     // This theme uses wp_nav_menu() in many locations.
-    register_nav_menus( array(
-        'main-menu'             => esc_html__( 'Primary', DOMAIN_NAME ),
-    ) );
+    register_nav_menus([
+        'main-menu'   => __( 'Primary', DOMAIN_NAME ),
+        'footer-menu' => __( 'Footer', DOMAIN_NAME ),
+    ]);
 
     /*
      * Switch default core markup for search form, comment form, and comments
@@ -60,7 +61,7 @@ function mgwp_after_setup_theme(){
 
 
     // 3. (Opcional) Ocultar el menú de ACF en el administrador de WordPress
-    if( !defined( 'WP_DEVELOPMENTMODE' ) || false == WP_DEVELOPMENTMODE )
+    if( ! defined( 'WP_LOCAL_DEV' ) || false == WP_LOCAL_DEV )
         add_filter('acf/settings/show_admin', '__return_false');
 
 }

@@ -4,7 +4,17 @@
  * These would be applied globally across the site.
  * Very little should be needed here.
  */
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	margin: 0;
+	padding: 0;
+}
 html {
     font-size: 100%;
     scroll-behavior: smooth;

@@ -36,7 +36,10 @@
 
 			<?php
 				wp_nav_menu([
+					'container' => 'nav',
+					'container_class' => 'navigation__wrapper',
 					'menu' => 'primary',
+					'menu_class' => 'navigation',
 				]);
 			?>
 			
