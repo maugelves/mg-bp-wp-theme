@@ -8,7 +8,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="author" href="<?php echo get_template_directory_uri(); ?>/humans.txt">
 
-	<?php if((defined('WP_LOCAL_DEV') && WP_LOCAL_DEV )): ?>
+	<?php if((defined('WP_DEVELOPMENTMODE') && WP_DEVELOPMENTMODE )): ?>
     <!-- LiveReload -->
     <script src="//localhost:35729/livereload.js"></script>
     <?php endif; ?>
